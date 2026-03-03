@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Us - KC Homecare Mobile Services" />
+    <title>Contact | KC HOMECARE MOBILE SERVICES</title>
+    <link rel="icon" sizes="16x16 32x32" href="images/KC CLEANING SERVICES LOGO-03.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="pages.css" />
+  </head>
+  <body>
+
+    <!-- ========== HEADER / NAVBAR ========== -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.html"><img src="images/KC CLEANING SERVICES LOGO-03.png" alt="Company Logo" /></a>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Our Gallery</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="https://wa.me/256730192380?text=Hello%2C%20I%20would%20like%20a%20free%20quote!" target="_blank" class="btn btn-quote nav-quote">
+        <i class="fab fa-whatsapp"></i> Get Free Quote
+      </a>
+      <div id="menu" class="fas fa-bars"></div>
+    </header>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero" style="background-image: url('images/contact.png');">
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content" data-aos="fade-up">
+        <h1>Get In Touch</h1>
+        <p>We'd love to hear from you. Reach out today.</p>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT PHOTO BANNER ========== -->
+    <section class="photo-banner-section">
+      <div class="heading"><span>Reach</span><span class="space">Us Here</span></div>
+      <div class="photo-banner-grid">
+        <div class="photo-banner-slot" data-aos="fade-up" style="background-image:url('images/contact.png')">
+          <div class="photo-banner-overlay"><i class="fas fa-camera"></i><span>Add Background Photo</span></div>
+        </div>
+        <div class="photo-banner-slot" data-aos="fade-up" data-aos-delay="100" style="background-image:url('images/image.png')">
+          <div class="photo-banner-overlay"><i class="fas fa-camera"></i><span>Add Background Photo</span></div>
+        </div>
+        <div class="photo-banner-slot wide" data-aos="fade-up" data-aos-delay="200" style="background-image:url('images/KC cleaning services.jpeg')">
+          <div class="photo-banner-overlay"><i class="fas fa-camera"></i><span>Add Background Photo</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT CONTENT ========== -->
+    <section class="contact-page">
+      <div class="contact-cards" data-aos="fade-up">
+        <div class="contact-info-card">
+          <i class="fas fa-phone"></i>
+          <h4>Call Us</h4>
+          <p>+256786336620</p>
+          <p>+256730192380</p>
+        </div>
+        <div class="contact-info-card">
+          <i class="fab fa-whatsapp"></i>
+          <h4>WhatsApp</h4>
+          <a href="https://wa.me/256730192380" target="_blank">+256730192380</a>
+        </div>
+        <div class="contact-info-card">
+          <i class="fas fa-envelope"></i>
+          <h4>Email Us</h4>
+          <a href="mailto:kcmobilehomecare@gmail.com">kcmobilehomecare@gmail.com</a>
+        </div>
+        <div class="contact-info-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>Find Us</h4>
+          <p>Kira, Shimon Rd</p>
+          <p>Kampala, Uganda</p>
+        </div>
+      </div>
+
+      <div class="contact-form-section">
+        <div class="contact-form-img" data-aos="fade-right" style="background-image:url('images/contact.png')">
+          <div class="photo-banner-overlay"><i class="fas fa-camera"></i><span>Add Contact Background</span></div>
+        </div>
+        <form data-aos="fade-left" class="contact-form" id="quoteForm">
+  <h3>Request Quotation</h3>
+  <input type="text"  id="fname"    placeholder="Your Name"        class="box" required />
+  <input type="email" id="femail"   placeholder="Your Email"       class="box" required />
+  <input type="tel"   id="fphone"   placeholder="Your Phone"       class="box" />
+  <input type="text"  id="flocation" placeholder="Your Location"   class="box" />
+  <input type="text"  id="fservice" placeholder="Service Required" class="box" />
+  <textarea           id="fmessage" placeholder="Your Message"     class="box" required></textarea>
+  <button type="button" class="btn btn-primary bubble-btn" onclick="sendToWhatsApp()">
+    <i class="fab fa-whatsapp"></i> Send via WhatsApp
+  </button>
+</form>
+      </div>
+
+      <!-- WhatsApp CTA -->
+      <div class="whatsapp-cta-box" data-aos="fade-up">
+        <div class="whatsapp-cta-inner">
+          <i class="fab fa-whatsapp"></i>
+          <div>
+            <h3>Prefer WhatsApp?</h3>
+            <p>Chat directly with us for a faster response and instant free quote.</p>
+          </div>
+          <a href="https://wa.me/256730192380?text=Hello%2C%20I%20would%20like%20a%20free%20quote!" target="_blank" class="btn btn-primary bubble-btn">Chat Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>About Company</h3>
+          <p>We are dedicated to providing professional and technically organised cleaning solutions that drive clean homes and peace of mind. Partner with us for freshness.</p>
+          <div class="share">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://wa.me/256730192380" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="box">
+          <h3>Quick Links</h3>
+          <a href="index.html" class="links">Home</a>
+          <a href="about.html" class="links">About</a>
+          <a href="services.html" class="links">Services</a>
+          <a href="gallery.html" class="links">Our Gallery</a>
+          <a href="testimonials.html" class="links">Testimonials</a>
+          <a href="contact.html" class="links">Contact</a>
+        </div>
+        <div class="box">
+          <h3>Contact Info</h3>
+          <p><i class="fas fa-phone"></i> +256786336620</p>
+          <p><i class="fas fa-phone"></i> +256730192380</p>
+          <p><i class="fas fa-envelope"></i> kcmobilehomecare@gmail.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Kira, Shimon Rd</p>
+        </div>
+        <div class="box">
+          <h3>Discount Alerts</h3>
+          <p>Subscribe to get the latest updates and offers.</p>
+          <input type="email" placeholder="Your Email" class="box" />
+          <a href="#" class="btn">Subscribe</a>
+        </div>
+      </div>
+      <div class="credit">&copy; 2026 <span>Developed and managed by RICH-CODE</span> | All Rights Reserved</div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/256730192380?text=Hello%2C%20I%20would%20like%20a%20free%20quote!" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+      <span class="whatsapp-tooltip">Chat with us!</span>
+    </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+  function sendToWhatsApp() {
+    const name     = document.getElementById('fname').value.trim();
+    const email    = document.getElementById('femail').value.trim();
+    const phone    = document.getElementById('fphone').value.trim();
+    const location = document.getElementById('flocation').value.trim();
+    const service  = document.getElementById('fservice').value.trim();
+    const message  = document.getElementById('fmessage').value.trim();
+
+    if (!name || !email || !message) {
+      alert('Please fill in your Name, Email and Message.');
+      return;
+    }
+
+    const text = 
+      `*NEW QUOTE REQUEST — KC Homecare*\n\n` +
+      `*Name:* ${name}\n` +
+      `*Email:* ${email}\n` +
+      `*Phone:* ${phone || 'Not provided'}\n` +
+      `*Location:* ${location || 'Not provided'}\n` +
+      `*Service:* ${service || 'Not specified'}\n` +
+      `*Message:* ${message}`;
+
+    const encoded = encodeURIComponent(text);
+    window.open(`https://wa.me/256730192380?text=${encoded}`, '_blank');
+  }
+</script>
+    <script src="pages.js"></script>
+
+  </body>
+</html>
