@@ -1,6 +1,14 @@
 $(document).ready(function(){
     
     // ========== MOBILE MENU TOGGLE ==========
+    // ========== MOBILE MENU TOGGLE ==========
+    $('#menu').on('click', function(e){
+        e.stopPropagation();
+        $(this).toggleClass('fa-bars').toggleClass('fa-times');
+        $('.navbar').toggleClass('active');
+    });
+
+    // ========== NAVBAR SCROLL EFFECTS ==========
    
     // ========== NAVBAR SCROLL EFFECTS ==========
   $(window).on('scroll', function(){
@@ -37,6 +45,11 @@ $(document).ready(function(){
             }
         });
     });
+
+    // Set header state correctly on first page load
+    if($(window).scrollTop() > 60){
+        $('.header').addClass('scrolled');
+    }
 
     // ========== BACK TO TOP ==========
     $('#backToTop').click(function(){
