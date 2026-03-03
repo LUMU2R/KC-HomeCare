@@ -1368,6 +1368,8 @@ section {
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
+
+/* ---- TABLET (max 991px) ---- */
 @media (max-width: 991px) {
   html { font-size: 55%; }
 
@@ -1377,20 +1379,45 @@ section {
   .header.scrolled { padding: 1.2rem 5%; }
 
   .slide-title { font-size: 5rem; }
-
   .heading span { font-size: 3.8rem; }
 
+  /* About — hide decorative frame, shrink badge */
   .about .row .image::before { display: none; }
   .about .row .image::after  { font-size: 1.2rem; }
+
+  /* About — stack vertically */
+  .about .row { flex-direction: column; gap: 3rem; }
+  .about .row .image,
+  .about .row .content { flex: 1 1 100%; width: 100%; }
+
+  /* Services — always stack, never reverse */
+  .services .row { flex-direction: column !important; gap: 3rem; margin-bottom: 6rem; }
+  .services .row .image,
+  .services .row .content { flex: 1 1 100%; width: 100%; }
+
+  /* Parallax — 2 columns */
+  .parallax .box-container { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+
+  /* Contact — stack */
+  .contact .row { flex-direction: column; gap: 3rem; }
+  .contact .row .image,
+  .contact .row form { flex: 1 1 100%; width: 100%; }
+
+  /* Footer — 2 columns */
+  .footer .box-container { grid-template-columns: repeat(2, 1fr); gap: 3rem; }
 }
 
+/* ---- MOBILE (max 768px) ---- */
 @media (max-width: 768px) {
   html { font-size: 52%; }
+
+  section { padding: 5rem 4%; }
 
   #menu { display: block; }
 
   .header { padding: 1.8rem 4%; }
 
+  /* Navbar dropdown */
   .header .navbar {
     position: absolute;
     top: calc(100% + 0.5rem);
@@ -1402,67 +1429,107 @@ section {
     box-shadow: 0 20px 50px rgba(0,0,0,0.15);
     border: 1px solid #d6eae6;
     transition: right 0.42s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 999;
+    z-index: 9999;
   }
-
   .header .navbar.active { right: 2rem; }
-
-  .header .navbar ul {
-    flex-direction: column;
-    gap: 0;
-    padding: 1.5rem;
-  }
-
+  .header .navbar ul { flex-direction: column; gap: 0; padding: 1.5rem; }
   .header .navbar ul li { width: 100%; }
-
   .header .navbar a {
     display: block;
     padding: 1.4rem 1.8rem;
     border-radius: var(--radius-sm);
     font-size: 1.5rem;
+    border-bottom: 1px solid var(--border);
   }
-
+  .header .navbar ul li:last-child a { border-bottom: none; }
   .header .navbar a:hover,
-  .header .navbar a.active {
-    background: var(--mint-pale);
-  }
-
+  .header .navbar a.active { background: var(--mint-pale); color: var(--teal); }
   .header .navbar a::after { display: none; }
 
-  .slide-content { left: 5%; max-width: 88%; }
-  .slide-title   { font-size: 3.8rem; }
-  .slide-text    { font-size: 1.7rem; }
+  /* Hero */
+  .slide-content { left: 4%; max-width: 92%; }
+  .slide-title   { font-size: 3.4rem; line-height: 1.15; }
+  .slide-text    { font-size: 1.65rem; margin-bottom: 2rem; }
+  .hero-cta      { flex-direction: column; width: 88%; margin-top: 20rem; gap: 1.5rem; }
+  .hero-cta .btn { width: 100%; text-align: center; }
 
-  .carousel-control { width: 4.2rem; height: 4.2rem; font-size: 1.5rem; }
-  .carousel-control.prev { left: 1.5rem; }
-  .carousel-control.next { right: 1.5rem; }
+  .carousel-control       { width: 4.2rem; height: 4.2rem; font-size: 1.5rem; }
+  .carousel-control.prev  { left: 1.5rem; }
+  .carousel-control.next  { right: 1.5rem; }
 
-  .hero-cta { flex-direction: column; width: 85%; }
-  .hero-cta .btn { width: 100%; }
+  /* Headings */
+  .heading span       { font-size: 3.2rem; }
+  .heading span.space { display: block; margin-left: 0; margin-top: 0.4rem; }
 
-  .parallax { background-attachment: scroll; }
+  /* About */
+  .about .row .content h3 { font-size: 3rem; }
+  .about .row .content p  { font-size: 1.6rem; }
 
+  /* Services */
+  .services .row .content h3     { font-size: 2.8rem; }
   .services .row .content::before { font-size: 5rem; }
+  .services .row .content .flex-btn { width: 100%; justify-content: center; }
+
+  /* Case studies */
+  .case .box-container { grid-template-columns: 1fr; }
+  .case .box-container .box .image { height: 22rem; }
+
+  /* Parallax */
+  .parallax { background-attachment: scroll; padding: 6rem 4%; }
+  .parallax .box-container { grid-template-columns: repeat(2, 1fr); gap: 1.8rem; }
+  .parallax .box-container .box { padding: 2.5rem 1.5rem; }
+  .parallax .box-container .box h3 { font-size: 4.2rem; }
+  .parallax .box-container .box h4 { font-size: 1.3rem; }
+
+  /* Testimonials */
+  .client .box-container { grid-template-columns: 1fr; }
+  .client .box-container .box { margin-top: 5rem; }
+
+  /* Contact */
+  .contact .row { flex-direction: column; gap: 2.5rem; }
+  .contact .row form { padding: 3rem 2.5rem; }
+  .contact .row form h3 { font-size: 2.6rem; }
+
+  /* Footer */
+  .footer .box-container { grid-template-columns: 1fr; gap: 3rem; }
+  .footer .credit { font-size: 1.4rem; }
 }
 
+/* ---- SMALL PHONES (max 450px) ---- */
 @media (max-width: 450px) {
   html { font-size: 50%; }
 
-  section { padding: 5rem 4%; }
+  section { padding: 4.5rem 4%; }
 
   .header .logo img { height: 5rem; }
 
+  /* Hero */
   .slide-content::before { display: none; }
-  .slide-title  { font-size: 3rem; }
+  .slide-title  { font-size: 2.8rem; }
   .slide-text   { font-size: 1.5rem; }
+  .hero-cta     { margin-top: 18rem; width: 92%; }
 
-  .heading span { font-size: 3rem; }
+  /* Headings */
+  .heading span       { font-size: 2.8rem; }
+  .heading span.space { font-size: 2.8rem; }
 
+  /* Services */
+  .services .row .content h3 { font-size: 2.4rem; }
+
+  /* Parallax */
+  .parallax .box-container .box h3 { font-size: 3.8rem; }
+
+  /* Carousel */
+  .carousel-control  { width: 3.5rem; height: 3.5rem; font-size: 1.4rem; }
   .carousel-indicators { bottom: 2rem; }
 
-  .parallax .box-container .box h3 { font-size: 4.5rem; }
+  /* Contact */
+  .contact .row form { padding: 2.5rem 2rem; }
+  .contact .row form h3 { font-size: 2.2rem; }
 
-  .contact .row form { padding: 3rem 2.5rem; }
+  /* Footer */
+  .footer .box-container .box h3 { font-size: 2rem; }
+  .footer .box-container .box p  { font-size: 1.4rem; }
 }
 
 a.flex-btn {
