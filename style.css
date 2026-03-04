@@ -10,7 +10,7 @@
 /* ========== CSS VARIABLES ========== */
 :root {
   /* Core palette — fresh, trustworthy, clean */
-  --teal:          #0a7c6e;        /* rich deep teal */
+  --teal:          #078f8b;        /* rich deep teal */
   --teal-dark:     #065a50;        /* pressed / hover depth */
   --teal-light:    #0fb49e;        /* accent glow */
   --mint:          #d4f5ef;        /* soft mint wash */
@@ -387,7 +387,7 @@ section {
 
 /* Tiny label above slide title */
 .slide-content::before {
-  content: '✦ KC HOMECARE';
+  content: '✨ KC HOMECARE & MOBILE CLEANING SERVICES';
   display: block;
   font-family: var(--font-body);
   font-size: 1.2rem;
@@ -1001,7 +1001,14 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.14em;
 }
-
+.parallax .box-container .box h5 {
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  margin-top: 1rem;
+  letter-spacing: 0.02em;
+}
 /* ========== TESTIMONIALS SECTION ========== */
 .client { background: var(--white); }
 
